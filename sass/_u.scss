@@ -1,0 +1,76 @@
+// UTITLY
+$main-color: hsl(233, 100%, 69%);
+$light-color: hsl(210, 10%, 33%);
+$dark-color: hsl(201, 11%, 66%);
+$media-color: #ccc;
+$fair-color: hsl(171, 66%, 44%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+h1, h2, h3, h4, h5{
+    color: #555;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+ .lead{
+     text-align: center;
+     padding-top: 10px;
+ }
+ %btn-shared{
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: all 0.7s;
+    border: none;
+    border-radius: 40px;
+    margin-right: 20px;
+
+}
+.bg-green{
+    background: $media-color;
+}
+.bg-blue{
+    background: $fair-color;
+    color: #fff;
+}
+.btn{
+  &-main{
+      @extend %btn-shared;
+      color: $dark-color;
+      background-color: $media-color;
+      border-radius: 20px;
+      box-shadow: 0 20px 20px;
+     
+  }
+  &-green{
+      @extend %btn-shared;
+      color: #fff;
+      background-color: $fair-color;
+      box-shadow: 2px 2px 10px rgb(38, 186, 164);
+  }
+  &-blue{
+      @extend %btn-shared;
+      color: #fff;
+      background-color: $main-color;
+      box-shadow: 2px 2px 10px	rgb(0, 26, 224, 0.5);
+  }
+  &:hover{
+      opacity: 0.7;
+  }
+}
+
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
